@@ -1,0 +1,41 @@
+sqlite3 /home/jerome/.config/chromium/Default/Web\ Data 
+
+CREATE TABLE logins (
+  origin_url VARCHAR NOT NULL, 
+  action_url VARCHAR, username_element VARCHAR,
+  username_value VARCHAR, password_element VARCHAR,
+  password_value BLOB, submit_element VARCHAR,
+  signon_realm VARCHAR NOT NULL,
+  ssl_valid INTEGER NOT NULL,
+  preferred INTEGER NOT NULL,
+  date_created INTEGER NOT NULL,
+  blacklisted_by_user INTEGER NOT NULL,
+  scheme INTEGER NOT NULL,UNIQUE (origin_url, username_element, username_value, password_element, submit_element, signon_realm));
+
+http://www.facebook.com/|https://login.facebook.com/login.php|email|jerome.lacoste@gmail.com|pass|MYPASSWORD||http://www.facebook.com/|0|1|1247053704|0|0
+
+
+name=default
+
+cd /home/jerome/.mozilla/firefox/*.$name
+
+signons.sqlite
+
+CREATE TABLE moz_logins (
+  id                 INTEGER PRIMARY KEY,
+  hostname           TEXT NOT NULL,
+  httpRealm          TEXT,
+  formSubmitURL      TEXT,
+  usernameField      TEXT NOT NULL,
+  passwordField      TEXT NOT NULL,
+  encryptedUsername  TEXT NOT NULL,
+  encryptedPassword  TEXT NOT NULL,
+  guid               TEXT,
+  encType            INTEGER);
+
+keys3.db
+
+http://docs.python.org/library/bsddb.html
+
+
+187|https://www.stepstone.no||https://www.stepstone.no|loginUserLogin|loginUserPassword|MEoEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECLFeYPzU___ENCRYPTED____4O8R2t5+06eImjoxIa6lXg==|MDoEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIh___ENCRYPTED___EoOsMol6|{2aeb080f-76a5-49af-810b-142bb8062537}|1
