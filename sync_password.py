@@ -100,9 +100,8 @@ def to_not_empty_unicode(x):
     return ur""
   return unicode(x)
 
-def main():
+def main(ff_db_csv):
   chrome_db = '/home/jerome/.config/chromium/Default/Web Data'
-  ff_db_csv = '/tmp/pw_dumps.csv'
   tmp_chrome_db = '/tmp/chrome_db'
   x = os.system(ff_dump_exe + " > " + ff_db_csv)
   if (x != 0):
@@ -119,4 +118,10 @@ def main():
   print "Carefully backup your chrome_db file (" + chrome_db + ") then copy " + tmp_chrome_db + " into it"
 
 if __name__ == '__main__':
-  main()
+  ff_db_csv = '/tmp/pw_dumps.csv'
+  try:
+    main(ff_db_csv)
+  finally:
+    if os.access(ff_db_csv, os.F_OK):
+      print "deleting temporary file containing firefox passwords"
+      os.unlink(ff_db_csv)
