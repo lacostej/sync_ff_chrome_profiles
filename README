@@ -1,2 +1,13 @@
-very dirty import of FF passwords into chrome.
-Tested on Linux...
+Very dirty import of FF passwords into chrome.
+
+Tested on Linux Ubuntu 9.04 with:
+* chromium 4.0.222.1 (Ubuntu build 28248)
+* Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.5pre) Gecko/20091007 Ubuntu/9.04 (jaunty) Shiretoko/3.5.5pre
+
+[Limitations]
+* doesn't deal with user blocked sites
+* doesn't fully import some fields (form fields, timestamps, preferred, etc...)
+* doesn't check for duplicates before writting...
+* doesn't automatically backups nor overwrites profile file
+
+Comments jerome.lacoste@gmail.com

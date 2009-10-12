@@ -118,6 +118,7 @@ def main(ff_db_csv):
   print "Carefully backup your chrome_db file (" + chrome_db + ") then copy " + tmp_chrome_db + " into it"
 
 if __name__ == '__main__':
+  # can I use ? tempfile.TemporaryFile ??
   ff_db_csv = '/tmp/pw_dumps.csv'
   try:
     main(ff_db_csv)
